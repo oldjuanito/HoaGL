@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>HoaAccountingDb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{6bebdc46-07d9-4f3d-98b7-ab1f23c9a15e}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>HoaAccountingDb</RootNamespace>
+    <AssemblyName>HoaAccountingDb</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="Puppy\" />
+    <Folder Include="Puppy\Tables\" />
+    <Folder Include="Puppy\Views\" />
+    <Folder Include="Puppy\Functions\" />
+    <Folder Include="Puppy\Stored Procedures\" />
+    <Folder Include="Test\" />
+    <Folder Include="Test\Stored Procedures\" />
+    <Folder Include="Security\" />
+    <Folder Include="UDTs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Puppy\Tables\ConstraintDefinitions.sql" />
+    <Build Include="Puppy\Tables\DomainValueCustomValidations.sql" />
+    <Build Include="Puppy\Tables\LookupValueConstraints.sql" />
+    <Build Include="Puppy\Tables\ReusableConstraints.sql" />
+    <Build Include="Puppy\Tables\SimpleWorkflows.sql" />
+    <Build Include="Puppy\Tables\TextValueCustomValidations.sql" />
+    <Build Include="Puppy\Tables\ValidPatternConstraints.sql" />
+    <Build Include="Puppy\Tables\ValidRangeConstraints.sql" />
+    <Build Include="Puppy\Tables\ValidValuesConstraints.sql" />
+    <Build Include="Puppy\Tables\Workflow_DotNetFuncStepSettings.sql" />
+    <Build Include="Puppy\Tables\Workflow_ExecWorkflowStepSettings.sql" />
+    <Build Include="Puppy\Tables\Workflow_PatternMatchConditionSettings.sql" />
+    <Build Include="Puppy\Tables\Workflow_StoredProcStepSettings.sql" />
+    <Build Include="Puppy\Tables\WorkflowConditionSettings.sql" />
+    <Build Include="Puppy\Tables\WorkflowErrorMapSettings.sql" />
+    <Build Include="Puppy\Tables\WorkflowStepInputMappings.sql" />
+    <Build Include="Puppy\Tables\WorkflowSteps.sql" />
+    <Build Include="Puppy\Tables\WorkflowStepSettings.sql" />
+    <Build Include="Puppy\Tables\WorkflowStepsV1.sql" />
+    <Build Include="Puppy\Views\CallsToMakeCrudToGenerate.sql" />
+    <Build Include="Puppy\Views\ConstraintsToGenerate.sql" />
+    <Build Include="Puppy\Views\ValidValuesConstraintsToGenerate.sql" />
+    <Build Include="Puppy\Functions\GetWorkflowStepTypeIncorrect.sql" />
+    <Build Include="Puppy\Stored Procedures\spGetPossibleValuesForUdf.sql" />
+    <Build Include="Puppy\Stored Procedures\spGetWorkflowDefinition.sql" />
+    <Build Include="Puppy\Stored Procedures\spGetWorkflowLatestDefinition.sql" />
+    <Build Include="Puppy\Stored Procedures\spMakeCrud.sql" />
+    <Build Include="Security\Generated.sql" />
+    <Build Include="Security\Puppy.sql" />
+    <Build Include="Security\Test.sql" />
+    <PostDeploy Include="Script.PostDeployment1.sql" />
+    <Build Include="Tables\GLTransactions.sql" />
+    <Build Include="UDTs\UDTs.sql" />
+    <Build Include="Puppy\Views\ValidRangesConstraintsToGenerate.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="PuppyData.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="master">
+      <DefaultValue>
+      </DefaultValue>
+      <Value>$(SqlCmdVar__1)</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HoaAccountingDb-LOCAL.publish.xml" />
+  </ItemGroup>
+</Project>

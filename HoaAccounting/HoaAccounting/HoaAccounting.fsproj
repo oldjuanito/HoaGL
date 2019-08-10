@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="LoadTransactionsWorkflow.fs" />
+    <Compile Include="CsvDataProvider.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastCsvParser" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PuppyCode\PuppyData\PuppyData\3 - Service\PuppyData.SimpleWorkflow\PuppyData.SimpleWorkflow.fsproj" />
+  </ItemGroup>
+
+</Project>

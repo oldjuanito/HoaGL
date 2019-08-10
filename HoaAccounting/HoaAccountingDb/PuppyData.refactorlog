@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0038a2f8-856f-4100-a909-0d94c2bbb2c8" ChangeDateTime="04/28/2018 21:38:19">
+    <Property Name="ElementName" Value="[dbo].[Students].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Students]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StudentId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6a682782-ead3-44fd-950c-67a99aeb2cbd" ChangeDateTime="07/02/2018 16:20:56">
+    <Property Name="ElementName" Value="[puppy].[IsWorkflowTypesCorrect]" />
+    <Property Name="ElementType" Value="SqlScalarFunction" />
+    <Property Name="ParentElementName" Value="[Puppy]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[GetWorkflowStepTypeIncorrect]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="35c321ab-428a-4df5-ba69-75bcca2bb075" ChangeDateTime="01/24/2019 01:57:14">
+    <Property Name="ElementName" Value="[puppy].[WorkflowSteps]" />
+    <Property Name="ElementType" Value="SqlTable" />
+    <Property Name="ParentElementName" Value="[Puppy]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[WorkflowStepsV1]" />
+  </Operation>
+</Operations>

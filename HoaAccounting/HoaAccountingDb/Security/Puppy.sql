@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [Puppy]
+    AUTHORIZATION [dbo];
+
