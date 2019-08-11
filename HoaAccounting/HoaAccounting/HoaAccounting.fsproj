@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="LoadTransactionsWorkflow.fs" />
     <Compile Include="CsvDataProvider.fs" />
+    <Compile Include="LoadTransactionsWorkflow.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\PuppyCode\PuppyData\PuppyData\3 - Service\PuppyData.SimpleWorkflow\PuppyData.SimpleWorkflow.fsproj" />
+    <ProjectReference Include="..\..\..\PuppyCode\PuppyData\PuppyData\3 - Service\PuppyData.SimpleWorkflow\PuppyData.SimpleWorkflow.fsproj" />
   </ItemGroup>
 
 </Project>

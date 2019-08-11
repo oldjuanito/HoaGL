@@ -104,6 +104,8 @@
     <Build Include="Tables\GLTransactions.sql" />
     <Build Include="UDTs\UDTs.sql" />
     <Build Include="Puppy\Views\ValidRangesConstraintsToGenerate.sql" />
+    <Build Include="StoredProcedures\spAddGLTransaction.sql" />
+    <Build Include="Tables\GLAccount.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="PuppyData.refactorlog" />

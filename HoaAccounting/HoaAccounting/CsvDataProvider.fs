@@ -17,8 +17,7 @@ module CsvDataProvider =
         seq {
             use stream = File.OpenRead(filePath)
             use parser = new CsvParser.CsvReader(stream, Encoding.UTF8, new CsvParser.CsvReader.Config(WithQuotes = true))
-            if parser.MoveNext() then 
-                while (parser.MoveNext()) do
-                    yield (parser.Current.ToArray() |> rowMapper)
+            while (parser.MoveNext()) do
+                yield (parser.Current.ToArray() |> rowMapper)
         }
         

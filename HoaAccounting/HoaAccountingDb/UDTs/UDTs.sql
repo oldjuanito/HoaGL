@@ -23,3 +23,6 @@ GO;
 CREATE TYPE [dbo].AppUserName
 	FROM varchar(150) NOT NULL;
 GO;
+CREATE TYPE [dbo].[AccountId]
+	FROM int NOT NULL;
+GO;
