@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="HoaDataSource">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=.\sqlexpress;Initial Catalog=HoaAccounting</ConnectString>
+    <IntegratedSecurity>true</IntegratedSecurity>
+    <Prompt>Specify a user name and password for data source HoaDataSource</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>6832c56f-4059-404d-829c-143104e62df5</DataSourceID>
+</RptDataSource>
