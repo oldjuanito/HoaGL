@@ -2,7 +2,8 @@
 (
 	@StartDate date,
 	@EndDate date,
-	@AccountId int
+	@AccountId int,
+	@CreditDebitFlag smallint
 )
 RETURNS TABLE AS RETURN
 (
@@ -17,4 +18,5 @@ RETURNS TABLE AS RETURN
 	on t.AccountId = a.AccountId
 	where t.TransactionDate between @StartDate and @EndDate
 	and t.AccountId = @AccountId
+	and t.CreditDebitFlag = @CreditDebitFlag
 )
