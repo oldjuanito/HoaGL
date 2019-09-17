@@ -26,3 +26,18 @@ GO;
 CREATE TYPE [dbo].[AccountId]
 	FROM int NOT NULL;
 GO;
+
+CREATE TYPE [dbo].[EstoppelId]
+	FROM int NOT NULL;
+GO;
+CREATE TYPE [dbo].[LotId]
+	FROM int NOT NULL;
+GO;
+
+CREATE TYPE [dbo].[GLTransactionId]
+	FROM int NOT NULL;
+GO;
+CREATE TYPE [dbo].[HouseNumber]
+	FROM int NOT NULL;
+GO;
+

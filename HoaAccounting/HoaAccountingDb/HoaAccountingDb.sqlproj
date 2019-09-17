@@ -108,6 +108,8 @@
     <Build Include="Tables\GLAccount.sql" />
     <Build Include="Functions\fnRpt_TransactionsInDateRange.sql" />
     <Build Include="Functions\fnRpt_AccountBalancesDateRange.sql" />
+    <Build Include="Tables\Estoppels.sql" />
+    <Build Include="Tables\Lots.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="PuppyData.refactorlog" />

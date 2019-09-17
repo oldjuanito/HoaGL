@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[GLTransactions]
 (
-[GLTransactionId] int not null identity(1,1),
+[GLTransactionId] [GLTransactionId] identity(1,1),
 [AccountId] [AccountId],
 	[CreditDebitFlag] CreditDebitFlag,
 [Description] [GLDescription],
