@@ -40,4 +40,19 @@ GO;
 CREATE TYPE [dbo].[HouseNumber]
 	FROM int NOT NULL;
 GO;
+CREATE TYPE [dbo].[AddressName]
+	FROM varchar(150) NOT NULL;
+GO;
+CREATE TYPE [dbo].[AddressLine]
+	FROM varchar(150) NOT NULL;
+GO;
+CREATE TYPE [dbo].[AddressCity]
+	FROM varchar(150) NOT NULL;
+GO;
+CREATE TYPE [dbo].[AddressStateCode]
+	FROM varchar(2) NOT NULL;
+GO;
+CREATE TYPE [dbo].[AddressZipCode]
+	FROM varchar(5) NOT NULL;
+GO;
 
