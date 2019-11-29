@@ -21,4 +21,11 @@
     <Property Name="ParentElementType" Value="SqlSchema" />
     <Property Name="NewName" Value="[WorkflowStepsV1]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="0942016d-3671-4daf-9c49-f50a5c7bab89" ChangeDateTime="11/29/2019 00:55:09">
+    <Property Name="ElementName" Value="[dbo].[HoaGlobalValues].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[HoaGlobalValues]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="City" />
+  </Operation>
 </Operations>

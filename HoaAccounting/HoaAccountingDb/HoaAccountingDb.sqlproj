@@ -68,6 +68,7 @@
     <Folder Include="Test\Stored Procedures\" />
     <Folder Include="Security\" />
     <Folder Include="UDTs" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Puppy\Tables\ConstraintDefinitions.sql" />
@@ -111,6 +112,8 @@
     <Build Include="Tables\Estoppels.sql" />
     <Build Include="Tables\Lots.sql" />
     <Build Include="Tables\AlternateAddress.sql" />
+    <Build Include="Views\vMailingAddresses.sql" />
+    <Build Include="Tables\HoaGlobalValues.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="PuppyData.refactorlog" />
