@@ -56,3 +56,12 @@ CREATE TYPE [dbo].[AddressZipCode]
 	FROM varchar(5) NOT NULL;
 GO;
 
+CREATE TYPE [dbo].[AssesmentYear]
+	FROM numeric(4) NOT NULL;
+GO;
+CREATE TYPE [dbo].[AssesmentReceivedDate]
+	FROM Date NOT NULL;
+GO;
+CREATE TYPE [dbo].[AssesmentDepositedDate]
+	FROM Date NULL;
+GO;
