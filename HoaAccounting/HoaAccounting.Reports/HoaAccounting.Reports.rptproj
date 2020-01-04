@@ -52,6 +52,7 @@
     <DataSource Include="HoaDataSource.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="HoaTreasurerAnnualMeetingReport.rdl" />
     <Report Include="HoaTreasurerMeetingReport.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />

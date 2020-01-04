@@ -65,3 +65,7 @@ GO;
 CREATE TYPE [dbo].[AssesmentDepositedDate]
 	FROM Date NULL;
 GO;
+
+CREATE TYPE [dbo].[OlbTranAmount]
+	FROM money NOT NULL;
+GO;
