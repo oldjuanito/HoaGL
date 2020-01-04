@@ -119,6 +119,8 @@
     <Build Include="Functions\fnGetCurrentAssesmentYear.sql" />
     <Build Include="Functions\fnGetCurrentAssesmentAmount.sql" />
     <Build Include="Tables\stage_OLBImport.sql" />
+    <Build Include="Tables\Budgets.sql" />
+    <Build Include="Functions\fnRpt_BudgetExpense.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="PuppyData.refactorlog" />

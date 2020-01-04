@@ -52,6 +52,7 @@
     <DataSource Include="HoaDataSource.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="HoaBudgetExpenseReport.rdl" />
     <Report Include="HoaTreasurerAnnualMeetingReport.rdl" />
     <Report Include="HoaTreasurerMeetingReport.rdl" />
   </ItemGroup>

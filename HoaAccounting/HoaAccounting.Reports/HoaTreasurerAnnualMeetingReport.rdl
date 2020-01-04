@@ -1449,7 +1449,7 @@ order by TransactionDate</CommandText>
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>05/01/2019 00:00:00</Value>
+          <Value>01/01/2019 00:00:00</Value>
         </Values>
       </DefaultValue>
       <Prompt>Start Date</Prompt>
@@ -1458,7 +1458,7 @@ order by TransactionDate</CommandText>
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>7/31/2019 12:00:00 AM</Value>
+          <Value>12/31/2019 00:00:00</Value>
         </Values>
       </DefaultValue>
       <Prompt>End Date</Prompt>

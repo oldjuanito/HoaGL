@@ -69,3 +69,6 @@ GO;
 CREATE TYPE [dbo].[OlbTranAmount]
 	FROM money NOT NULL;
 GO;
+CREATE TYPE [dbo].[BudgetYear]
+	FROM numeric(4) NOT NULL;
+GO;
