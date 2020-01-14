@@ -5,7 +5,8 @@
 		isnull(altAddrs.AddressCity, dv.DefaultAddressCity) AddressCity,
 		isnull(altAddrs.AddressStateCode, dv.DefaultAddressStateCode) AddressStateCode,
 		isnull(altAddrs.AddressZipCode, dv.DefaultAddressZipCode) AddressZipCode,
-		cast(case when altAddrs.AddressLine is null then 0 else 1 end as bit) [IsAlternateAddress]
+		cast(case when altAddrs.AddressLine is null then 0 else 1 end as bit) [IsAlternateAddress],
+		l.HouseNumber 
 	FROM lots l
 	left join AlternateAddress altAddrs
 	on l.HouseNumber = altAddrs.HouseNumber

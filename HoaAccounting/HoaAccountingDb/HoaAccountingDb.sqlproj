@@ -121,6 +121,7 @@
     <Build Include="Tables\stage_OLBImport.sql" />
     <Build Include="Tables\Budgets.sql" />
     <Build Include="Functions\fnRpt_BudgetExpense.sql" />
+    <Build Include="Functions\fnGetMailingInfoOfPaidAssesment.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="PuppyData.refactorlog" />
