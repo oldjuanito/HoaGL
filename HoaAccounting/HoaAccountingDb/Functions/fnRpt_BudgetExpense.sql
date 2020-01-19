@@ -4,8 +4,8 @@ AS
 RETURN (
 		SELECT coalesce(ActualExpense.GLCategory, b.GLCategory) GLCategory
 			,b.BudgetAmount
-			,ActualExpense.ActualAmount
-			,proposed.BudgetAmount ProposedAmount
+			,coalesce(ActualExpense.ActualAmount, cast(0.0 AS MONEY)) ActualAmount
+			,b.ProposedAmount
 		FROM (
 			SELECT t.GLCategory
 				,sum(t.Amount) ActualAmount
@@ -15,8 +15,13 @@ RETURN (
 				AND t.CreditDebitFlag = - 1
 			GROUP BY t.GLCategory
 			) ActualExpense
-		FULL JOIN Budgets b ON b.GLCategory = ActualExpense.GLCategory
-			AND b.BudgetYear = @Year
-		LEFT JOIN Budgets proposed ON proposed.GLCategory = ActualExpense.GLCategory
-			AND proposed.BudgetYear = @Year + 1
+		FULL JOIN (
+			SELECT proposed.GLCategory
+				,prev.BudgetAmount
+				,proposed.BudgetAmount ProposedAmount
+			FROM Budgets proposed
+			LEFT JOIN Budgets prev ON proposed.GLCategory = prev.GLCategory
+				AND prev.BudgetYear = proposed.BudgetYear - 1
+			WHERE proposed.BudgetYear = @Year + 1
+			) b ON b.GLCategory = ActualExpense.GLCategory
 		)

@@ -1163,13 +1163,15 @@ order by TransactionDate</CommandText>
                 <TablixMember />
               </TablixMembers>
             </TablixRowHierarchy>
-            <NoRowsMessage>No transactions</NoRowsMessage>
             <DataSetName>SavingsDebits</DataSetName>
             <Top>5.58538in</Top>
             <Left>0.00001in</Left>
             <Height>0.25in</Height>
             <Width>5in</Width>
             <ZIndex>14</ZIndex>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
             <Style>
               <Border>
                 <Style>Solid</Style>
