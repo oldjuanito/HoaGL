@@ -18,6 +18,7 @@ RETURNS TABLE AS RETURN
 		from GLTransactions t
 		where  t.TransactionDate < @StartDate
 		and t.AccountId = @AccountId
+		and t.ExcludeFromReport = 0
 		) StartBal
 	on 1 = 1
 	left join (
@@ -25,6 +26,7 @@ RETURNS TABLE AS RETURN
 		from GLTransactions t
 		where  t.TransactionDate between @StartDate and @EndDate
 		and t.AccountId = @AccountId
+		and t.ExcludeFromReport = 0
 		) EndBal
 	on 1 = 1
 	where a.AccountId = @AccountId

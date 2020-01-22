@@ -19,7 +19,8 @@
           </QueryParameter>
         </QueryParameters>
         <CommandText>SELECT * FROM [dbo].fnRpt_BudgetExpense(
-   @Year)</CommandText>
+   @Year) t
+order by GlCategory</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
@@ -612,8 +613,8 @@
             </TablixRowHierarchy>
             <DataSetName>BudgetExpense</DataSetName>
             <Top>1.03in</Top>
-            <Height>0.78125in</Height>
-            <Width>6in</Width>
+            <Height>0.78124in</Height>
+            <Width>6.00001in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>

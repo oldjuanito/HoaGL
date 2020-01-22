@@ -11,6 +11,7 @@
 	,TranCount INT NOT NULL
 	,[GLCategory] [GLCategory]
 	,[CreatedOn] DATETIME NOT NULL DEFAULT GetDate()
+	,ExcludeFromReport bit NOT NULL DEFAULT 0
 	,CONSTRAINT [PK_GLTransactions] PRIMARY KEY ([GLTransactionId])
 	,
 	)

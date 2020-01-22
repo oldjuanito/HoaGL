@@ -13,6 +13,7 @@ RETURN (
 			WHERE t.TransactionDate BETWEEN cast(@Year AS VARCHAR(4)) + '-01-01'
 					AND cast(@Year AS VARCHAR(4)) + '-12-31'
 				AND t.CreditDebitFlag = - 1
+				and t.ExcludeFromReport = 0
 			GROUP BY t.GLCategory
 			) ActualExpense
 		FULL JOIN (

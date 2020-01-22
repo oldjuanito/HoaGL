@@ -21,4 +21,5 @@ RETURNS TABLE AS RETURN
 	where t.TransactionDate between @StartDate and @EndDate
 	and t.AccountId = @AccountId
 	and t.CreditDebitFlag = @CreditDebitFlag
+	and t.ExcludeFromReport = 0
 )
