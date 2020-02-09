@@ -10,7 +10,7 @@ RETURNS TABLE AS RETURN
 		a.ReportName,
 		isnull(StartBal.TranBalance,0.0) + a.InitialBalance Balance,
 		@StartDate BalanceDate,
-		isnull(EndBal.TranBalance,0.0) + a.InitialBalance EndBalance,
+		isnull(StartBal.TranBalance,0.0) + isnull(EndBal.TranBalance,0.0) + a.InitialBalance EndBalance,
 		@EndDate EndBalanceDate
 	from GLAccount a 
 	left join (
