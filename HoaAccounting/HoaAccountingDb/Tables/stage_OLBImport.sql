@@ -4,5 +4,6 @@
 	,[Amount] [OlbTranAmount]
 	,Filler [char]
 	,[CheckNumber] [CheckNumber]
-	,[Description] [GLDescription]
+	,[Description] [GLDescription], 
+    [AccountId] [AccountId] NULL
 	)

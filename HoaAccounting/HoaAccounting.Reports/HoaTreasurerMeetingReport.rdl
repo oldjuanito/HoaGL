@@ -2400,12 +2400,11 @@ order by TransactionDate</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Sum(Fields!EndBalance.Value, "SavingsDataSet") + Sum(Fields!EndBalance.Value, "CheckingDataSet")</Value>
-                    <MarkupType>HTML</MarkupType>
+                    <Value>=(Sum(Fields!EndBalance.Value, "SavingsDataSet") + Sum(Fields!EndBalance.Value, "CheckingDataSet"))</Value>
                     <Style>
                       <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <Format>C2</Format>
+                      <Format>'$'#,0.00;('$'#,0.00)</Format>
                       <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
                     </Style>
                   </TextRun>
@@ -2482,7 +2481,7 @@ order by TransactionDate</CommandText>
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>05/01/2019 00:00:00</Value>
+          <Value>=DateSerial(Year(Now()), Month(Now()), "1").AddMonths(-3)</Value>
         </Values>
       </DefaultValue>
       <Prompt>Start Date</Prompt>
@@ -2491,13 +2490,18 @@ order by TransactionDate</CommandText>
       <DataType>DateTime</DataType>
       <DefaultValue>
         <Values>
-          <Value>7/31/2019 12:00:00 AM</Value>
+          <Value>=DateSerial(Year(Now()), Month(Now()), "1").AddDays(-1)</Value>
         </Values>
       </DefaultValue>
       <Prompt>End Date</Prompt>
     </ReportParameter>
     <ReportParameter Name="Preparer">
       <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Juan Tarquino</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Preparer</Prompt>
     </ReportParameter>
   </ReportParameters>
