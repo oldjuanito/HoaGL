@@ -12,4 +12,5 @@
 	on l.HouseNumber = altAddrs.HouseNumber
 	left join [HoaGlobalValues] dv
 	on 1=1
+	where l.NonHomeLot = 0 -- true residential homes only
 
