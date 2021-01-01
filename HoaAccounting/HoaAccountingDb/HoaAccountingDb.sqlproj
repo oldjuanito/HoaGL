@@ -143,5 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="HoaAccountingDb-LOCAL.publish.xml" />
+    <None Include="HoaAccountingDb-cloud.publish.xml" />
   </ItemGroup>
 </Project>
